@@ -16,9 +16,9 @@ class Kohonen:
     def network(self) -> list:
         return self._network
 
-    def is_trained(self, old_neurons: list,
+    def is_trained(self, old_network: list,
                    max_neurons_diff: float = .005) -> bool:
-        for new, old in zip(self._network, old_neurons):
+        for new, old in zip(self._network, old_network):
             for new_elem, old_elem in zip(new, old):
                 if abs(new_elem - old_elem) > max_neurons_diff:
                     return False
