@@ -1,3 +1,6 @@
+import typing
+
+
 class Chromosome:
     @staticmethod
     def _convert_to_binary(value: int, bin_length: int) -> str:
@@ -10,3 +13,6 @@ class Chromosome:
     def __init__(self, value: int, bin_length: int):
         self._bit_value = self._convert_to_binary(value, bin_length)
         self._value = value
+
+    def apply_func(self, func: typing.Callable[[int], int]) -> int:
+        return func(self._value)
