@@ -3,7 +3,7 @@
 Make sure that you have `python3.7` on your computer
 Use simple syntax to run the script:
 ```shell script
-python3 manage.py <moduel>
+python3 manage.py <module>
 ```
 For example:
 ```shell script
